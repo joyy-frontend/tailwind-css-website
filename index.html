@@ -4,10 +4,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>Tailwind CSS Website</title>
 </head>
 
 <body>
+  <!-- Joy -->
+  <nav class="absolute top-0 left-0 w-full z-20 pt-5">
+    <div class="container mx-auto flex items-center justify-between">
+      <a href="#" class="ml-5 text-lg font-bold text-white">Brand Name</a>
+
+      <div class="block sm:hidden flex justify-end">
+        <img src="./assets/icn-search.png" alt="search" class="h-6 w-6 p-1" />
+        <img src="./assets/icn-shopping-cart.png" alt="shoppingCart" class="h-6 w-6 p-1" />
+        <div class="m-2 pt-2">
+          <i class="material-icons border-3 border-red-500">menu</i>
+        </div>
+      </div>
+
+      <div class="hidden sm:flex flex-grow justify-around pt-2">
+        <ul class="flex space-x-5">
+          <li class="nav-item">
+            <a href="#" class="text-white hover:text-gray-900">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="text-white hover:text-gray-900">Product</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="text-white hover:text-gray-900">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="text-white hover:text-gray-900">Contact</a>
+          </li>
+        </ul>
+        <div class="flex items-center space-x-5">
+          <a href="#" class="hidden lg:block text-white hover:text-gray-900">Login</a>
+          <button class="hidden lg:block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Become a Member &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="relative h-screen">
+    <!-- Gradient Layer -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent z-10"></div>
+
+    <!-- Image Layer -->
+    <img src="./assets/header-content.jpg" alt="Header Image"
+      class="absolute inset-0 w-full h-full object-cover z-0 brightness-50">
+
+    <div class="relative z-20 flex flex-col items-start justify-center h-full text-white p-5 lg:p-10">
+      <div class="ml-40"> <!-- 전체 내용을 왼쪽으로 이동시키기 위한 마진 추가 -->
+        <h1 class="font-bold text-lg text-3xl">We Ensure A Best Insurance Service.</h1>
+        <span class="mt-2">We know how large objects will act, but things on a small scale.</span>
+        <div class="flex flex-col lg:flex-row justify-start items-start mt-8 space-y-4 lg:space-y-0 lg:space-x-4">
+          <button class="bg-blue-500 text-white rounded-2xl px-10 py-3">
+            Get Quote Now
+          </button>
+          <button class="bg-transparent border-2 border-white text-white rounded-2xl px-10 py-3">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
 
 </body>
 
