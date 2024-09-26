@@ -5,77 +5,152 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Tailwind CSS Website</title>
 </head>
 
 <body>
-  <!-- Joy -->
-  <nav class="absolute top-0 left-0 w-full z-20 pt-5">
-    <div class="container mx-auto flex items-center justify-between">
-      <a href="#" class="ml-5 text-lg font-bold text-white">Brand Name</a>
 
-      <div class="block sm:hidden flex justify-end">
-        <img src="./assets/icn-search.png" alt="search" class="h-6 w-6 p-1" />
-        <img src="./assets/icn-shopping-cart.png" alt="shoppingCart" class="h-6 w-6 p-1" />
+  <!-- Joy -->
+  <nav class="absolute top-0 left-0 w-full z-10 bg-transparent">
+    <div class="container mx-auto flex flex-wrap items-center justify-between">
+      <a class="text-white ms-lg-5 text-lg font-bold text-1xl" href="#">Brand Name</a>
+      <div class="flex items-center space-x-4 lg:hidden">
+        <img src="./assets/icn-search.png" alt="search" class="m-icon p-1" />
+        <img src="./assets/icn-shopping-cart.png" alt="shoppingCart" class="m-icon p-1" />
         <div class="m-2 pt-2">
-          <i class="material-icons border-3 border-red-500">menu</i>
+          <i class="material-icons border-2 border-none">menu</i>
         </div>
       </div>
 
-      <div class="hidden sm:flex flex-grow justify-around pt-2">
-        <ul class="flex space-x-5">
-          <li class="nav-item">
-            <a href="#" class="text-white hover:text-gray-900">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="text-white hover:text-gray-900">Product</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="text-white hover:text-gray-900">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="text-white hover:text-gray-900">Contact</a>
+      <div class="lg:flex w-full lg:w-auto items-center justify-between text-center py-5 text-1xl">
+        <ul class="flex flex-col lg:flex-row lg:space-x-8 text-white lg:mr-64 border border-blue-500">
+          <li><a class="nav-link active" href="#">Home</a></li>
+          <li><a class="nav-link" href="#">Product</a></li>
+          <li><a class="nav-link" href="#">Pricing</a></li>
+          <li><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <ul class="hidden lg:flex items-center space-x-6">
+          <li><a href="#" class="text-white">Login</a></li>
+          <li>
+            <button class="bg-blue-500 text-white py-2 px-6 rounded-lg">Become a Member&nbsp;&rarr;</button>
           </li>
         </ul>
-        <div class="flex items-center space-x-5">
-          <a href="#" class="hidden lg:block text-white hover:text-gray-900">Login</a>
-          <button class="hidden lg:block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-            Become a Member &rarr;
-          </button>
-        </div>
       </div>
+
     </div>
   </nav>
 
+  <div
+    class="hero-image flex flex-col lg:flex-row justify-center lg:justify-start items-center text-white bg-cover bg-center h-screen"
+    style="background-image: linear-gradient(89.85deg, rgba(0, 0, 0, 1) 0.13%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 99.56%), url('./assets/header-content.jpg');">
+    <div class="ensure-container p-5 lg:p-12 text-center lg:text-left">
+      <div class="text-container">
+        <h1 class="font-bold text-4xl lg:text-6xl mb-4">We Ensure A Best Insurance Service.</h1>
+        <span class="block text-lg lg:text-xl">We know how large objects will act, but things on a small scale.</span>
+      </div>
+      <div class="mt-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-center">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg w-full lg:w-auto">Get
+          Quote
+          Now</button>
+        <button class="border border-white text-white font-bold py-3 px-6 rounded-lg w-full lg:w-auto">Learn
+          More</button>
+      </div>
+    </div>
 
-  <div class="relative h-screen">
-    <!-- Gradient Layer -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent z-10"></div>
+    <!-- <div class="ensure-container p-5 lg:p-12 text-center lg:text-left">
+      <div class="text-container">
+        <h1 class="font-bold text-4xl lg:text-6xl mb-4">We Ensure A Best Insurance Service.</h1>
+        <span class="block text-lg lg:text-xl">We know how large objects will act, but things on a small scale.</span>
+      </div>
+      <div class="mt-8 flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 items-center">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg w-full lg:w-auto">Get
+          Quote
+          Now</button>
+        <button class="border border-white text-white font-bold py-3 px-6 rounded-lg w-full lg:w-auto">Learn
+          More</button>
+      </div>
+    </div> -->
+  </div>
 
-    <!-- Image Layer -->
-    <img src="./assets/header-content.jpg" alt="Header Image"
-      class="absolute inset-0 w-full h-full object-cover z-0 brightness-50">
-
-    <div class="relative z-20 flex flex-col items-start justify-center h-full text-white p-5 lg:p-10">
-      <div class="ml-40"> <!-- 전체 내용을 왼쪽으로 이동시키기 위한 마진 추가 -->
-        <h1 class="font-bold text-lg text-3xl">We Ensure A Best Insurance Service.</h1>
-        <span class="mt-2">We know how large objects will act, but things on a small scale.</span>
-        <div class="flex flex-col lg:flex-row justify-start items-start mt-8 space-y-4 lg:space-y-0 lg:space-x-4">
-          <button class="bg-blue-500 text-white rounded-2xl px-10 py-3">
-            Get Quote Now
-          </button>
-          <button class="bg-transparent border-2 border-white text-white rounded-2xl px-10 py-3">
-            Learn More
-          </button>
-        </div>
+  <div class="hidden sm:flex bg-gray-800 text-white p-5 justify-around border border-red-500">
+    <div class="flex flex-col sm:flex-row space-x-6 pt-4 pb-2">
+      <div class="text-center">
+        <img src="./assets/folder.png" alt="Image 1" class="mx-auto mb-4 w-16 h-16">
+        <div class="font-bold mb-2">Peace of Mind</div>
+        <p class="max-w-xs">So it really behaves like neither. <br /> Now we have given up.</p>
+      </div>
+      <div class="text-center">
+        <img src="./assets/bookmark.png" alt="Image 2" class="mx-auto mb-4 w-16 h-16">
+        <div class="font-bold mb-2">Set For Life</div>
+        <p class="max-w-xs">They were used to create the <br /> machines that launched.</p>
+      </div>
+      <div class="text-center">
+        <img src="./assets/member.png" alt="Image 3" class="mx-auto mb-4 w-16 h-16">
+        <div class="font-bold mb-2">100% Satisfaction</div>
+        <p class="max-w-xs">So it really behaves like neither. <br /> Now we have given up.</p>
       </div>
     </div>
   </div>
 
+  <!-- mobile -->
+  <div class="block sm:hidden text-white p-5" style="background-color: #252B42">
+    <div class="text-center my-4">
+      <img src="./assets/only-mobile.png" alt="Mobile Image" class="mx-auto w-1/6">
+      <div class="font-bold text-lg my-4">Peace of Mind</div>
+      <p class="max-w-xs mx-auto">So it really behaves like neither. Now we have given up.</p>
+    </div>
+    <div class="text-center my-4">
+      <img src="./assets/only-mobile.png" alt="Mobile Image" class="mx-auto w-1/6">
+      <div class="font-bold text-lg my-4">Set For Life</div>
+      <p class="max-w-xs mx-auto">They were used to create the machines that launched.</p>
+    </div>
+    <div class="text-center my-4">
+      <img src="./assets/only-mobile.png" alt="Mobile Image" class="mx-auto w-1/6">
+      <div class="font-bold text-lg my-4">100% Satisfaction</div>
+      <p class="max-w-xs mx-auto">So it really behaves like neither. Now we have given up.</p>
+    </div>
+  </div>
 
-
-
-
+  <!-- Industry -->
+  <div class="flex flex-col items-center p-5 bg-blue-200 text-center" style="background-color: #8EC2F2;">
+    <h1 class="hidden sm:block text-4xl font-bold text-white mb-4">Industry</h1>
+    <h1 class="block lg:hidden text-4xl font-bold text-white mb-4">What <br />Clients Say</h1>
+    <p class="text-white max-w-xl mb-6">Problems trying to resolve the conflict between the two major realms of
+      Classical
+      physics: Newtonian mechanics.</p>
+    <div class="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8">
+      <img src="./assets/user1.png" alt="Profile Photo" class="hidden lg:block w-24 h-24 object-cover rounded-full">
+      <div class="card bg-white shadow-lg p-6 rounded-lg text-left">
+        <h5 class="text-lg font-bold mb-2">Regina Miles</h5>
+        <p class="text-gray-600">Designer</p>
+        <div class="flex space-x-1 my-2">
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="far fa-star"></i></span>
+        </div>
+        <p class="text-gray-600 text-justify">This proved to be impossible using the traditional concepts of space and
+          time. Einstein developed a new view of time first and then space.</p>
+      </div>
+      <img src="./assets/user2.png" alt="Profile Photo" class="hidden lg:block w-24 h-24 object-cover rounded-full">
+      <div class="card bg-white shadow-lg p-6 rounded-lg text-left">
+        <h5 class="text-lg font-bold mb-2">Regina Miles</h5>
+        <p class="text-gray-600">Designer</p>
+        <div class="flex space-x-1 my-2">
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+          <span class="text-yellow-500"><i class="far fa-star"></i></span>
+        </div>
+        <p class="text-gray-600 text-justify">This proved to be impossible using the traditional concepts of space and
+          time. Einstein developed a new view of time first and then space.</p>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
